@@ -2,14 +2,14 @@ CREATE DATABASE IF NOT EXISTS trouve_ton_artisan;
 USE trouve_ton_artisan;
 
 
---Créations des catégories du menu--
+-- Créations des catégories du menu --
 
 CREATE TABLE categories (
     id INT PRIMARY KEY auto_increment,
     nom VARCHAR(100) NOT NULL
 ) engine=InnoDB;
 
---Créations des spécialités--
+-- Créations des spécialités --
 
 CREATE TABLE specialities (
     id INT PRIMARY KEY auto_increment,
@@ -18,7 +18,7 @@ CREATE TABLE specialities (
     constraint fk_speciality_category FOREIGN KEY (category_id) REFERENCES categories(id) on delete CASCADE
 ) engine=InnoDB;
 
---Créations des artisans--
+-- Créations des artisans --
 
 CREATE TABLE artisans (
     id INT PRIMARY KEY auto_increment,
