@@ -1,6 +1,6 @@
 USE trouve_ton_artisan;
 
---Catégories--
+-- Catégories --
 
 INSERT INTO categories (nom) VALUES
 ('Bâtiment'),
@@ -8,7 +8,7 @@ INSERT INTO categories (nom) VALUES
 ('Fabrication'),
 ('Alimentation');
 
---Spécialités--
+-- Spécialités --
 
 INSERT INTO specialities (nom, category_id) VALUES
 ('Boucher', 4),
@@ -27,7 +27,7 @@ INSERT INTO specialities (nom, category_id) VALUES
 ('Toiletteur', 2),
 ('Webdesign', 2);
 
---Artisans--
+-- Artisans --
 
 INSERT INTO artisans (nom, note, speciality_id, localisation, a_propos, email, site_web, top_artisan) VALUES
 ('Boucherie Dumont', 4.5, 1, 'Lyon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.', 
@@ -63,7 +63,7 @@ INSERT INTO artisans (nom, note, speciality_id, localisation, a_propos, email, s
 ('Valérie Laderoute', 4.5, 14, 'Valence', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.',
 'v-laredoute@gmail.com', NULL, FALSE),
 ('CM Graphisme', 4.4, 15, 'Valence', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.',
-'contact@cm-graphisme.com', 'https://cm-graphisme.com', FALSE),
+'contact@cm-graphisme.com', 'https://cm-graphisme.com', FALSE);
 
 
 
