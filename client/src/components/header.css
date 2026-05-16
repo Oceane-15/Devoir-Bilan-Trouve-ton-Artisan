@@ -1,0 +1,240 @@
+/* --- CONFIGURATION GÉNÉRALE --- */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1f8fc;
+  height: 80px;
+  position: relative;
+  box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* --- VERSION MOBILE --- */
+@media (max-width: 767px) {
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; 
+    padding: 0 10px;
+    gap: 5px; 
+  }
+  .logo-section { 
+    order: 1; 
+    flex: 0 1 auto; 
+    max-width: 40%
+  }
+
+  .Logo-img {
+    height: 80px; 
+    margin-left: 0px;
+    width: auto;
+  }
+  .search-section { 
+    order: 2; 
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: center; 
+  }
+  .burger-btn { 
+    order: 3; 
+    display: block; 
+    background: none; 
+    border: none; 
+    font-size: 1.7rem; 
+    color: #0074c7; 
+    cursor: pointer; 
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 100px; 
+    background: #f1f8fc;
+    border-bottom: 2px solid #0074c7;
+    border-right: 2px solid #0074c7;
+    border-radius: 4px;
+    display: flex;
+    padding: 5px;
+  }
+
+  .search-bar input::placeholder {
+  font-size: 0rem; 
+  color: #384050;
+}
+ .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #f1f8fc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.is-open { 
+    display: block; 
+  }
+  .nav-menu ul { 
+    list-style: none; 
+    padding: 0;
+    border-top: 1px solid #384050;
+  }
+  .nav-menu li { 
+    padding: 15px; 
+    text-align: center;
+    border-bottom: 1px solid #384050;
+    cursor: pointer; 
+  }
+}
+
+/* --- VERSION TABLETTE --- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-header { height: 90px; }
+  
+  .Logo-img { 
+    height: 120px;
+    margin-left: 20px; 
+  }
+
+.search-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+   .search-bar { 
+    width: 60%;
+    background: #f1f8fc;
+    border-bottom: 2px solid #0074c7;
+    border-right: 2px solid #0074c7;
+    border-radius: 4px;
+    display: flex;
+    padding: 5px;
+  }
+
+   .burger-btn { 
+    order: 3; 
+    display: block; 
+    background: none; 
+    border: none; 
+    font-size: 1.7rem; 
+    color: #0074c7; 
+    cursor: pointer; 
+  }
+
+   .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #f1f8fc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+ .nav-menu.is-open { 
+    display: block; 
+  }
+  .nav-menu ul { 
+    list-style: none; 
+    padding: 0; 
+    border-top: 1px solid #384050;
+  }
+  .nav-menu li { 
+    padding: 15px; 
+    text-align: center;
+    border-bottom: 1px solid #384050;
+    cursor: pointer;  
+  }
+}
+
+/* --- VERSION ORDINATEUR --- */
+@media (min-width: 1024px) {
+  .main-header { 
+    height: 100px; 
+    padding: 15px 40px; 
+  }
+
+  .burger-btn{
+    display: none;
+  }
+
+  
+  .logo-section { 
+    order: 1; 
+  }
+
+  .Logo-img {
+  height: 250px;
+  margin-left: 90px;
+  width: auto;
+}
+
+ .nav-menu {
+    order: 2;
+    display: flex; 
+    position: static;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 70px;
+    margin-right: 70px;
+  }
+
+  .nav-menu ul { 
+    display: flex; 
+    gap: 60px; 
+    list-style: none; 
+  }
+  .nav-menu li {
+     border: none; 
+     font-size: 1.2rem; 
+     cursor: pointer; 
+    }
+
+  .search-section {
+    order: 3;
+    flex-grow: 0;
+  }
+
+  .search-bar {
+    max-width: 250px; 
+    background: #f1f8fc;
+    border-bottom: 3px solid #0074c7;
+    border-right: 3px solid #0074c7 ;
+    border-radius: 4px;
+    display: flex;
+    padding: 10px 10px;
+    margin-right: 50px;
+  }
+}
+
+.search-bar input { 
+  border: none; 
+  outline: none;
+  background-color: #f1f8fc;
+  font-size: 1.1rem; 
+  width: 100%; 
+}
+.search-bar input::placeholder {
+  font-size: 1.1rem; 
+  color: #384050;
+}
+.search-btn { 
+  background: none; 
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer; 
+}
+
+
+
+
+
+
+
+
+

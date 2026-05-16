@@ -1,0 +1,83 @@
+/* --- STYLE DE BASE (Mobile & Tablette) --- */
+.main-footer {
+  background-color: #0074c7; /* Le bleu exact de ta capture */
+  color: white;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Tout centré pour mobile/tablette */
+  text-align: center;
+}
+
+.footer-logo-img {
+  height: 100px; /* Taille du logo selon tes images */
+  margin-bottom: 20px;
+}
+
+.footer-address p {
+  margin: 5px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Ligne de séparation fine */
+  padding-top: 20px;
+}
+
+.construction-tag {
+  background-color: #d93025; /* Le rouge "Page en construction" */
+  color: white;
+  display: inline-block;
+  padding: 8px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column; /* Liens l'un sous l'autre sur tel */
+  gap: 15px;
+}
+
+.footer-links span {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* --- VERSION ORDINATEUR (À partir de 1024px) --- */
+@media (min-width: 1024px) {
+  .footer-top {
+    display: flex;
+    justify-content: space-between; /* Logo à gauche, Adresse à droite */
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between; /* Tag à gauche, Liens à droite */
+    align-items: center;
+    text-align: left;
+  }
+
+  .footer-links {
+    flex-direction: row; /* Liens alignés horizontalement */
+    gap: 30px;
+  }
+
+  .construction-tag {
+    margin-bottom: 0; /* Aligné avec les liens */
+  }
+}

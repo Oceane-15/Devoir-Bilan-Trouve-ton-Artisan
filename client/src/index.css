@@ -1,0 +1,17 @@
+:root {
+  --primary-blue: #0074c7;  
+  --dark-blue: #00497c;       
+  --light-blue: #f1f8fc;      
+  --text-dark: #384050;       
+  --red-accent: #cd2c2e;      
+}
+
+body {
+  margin: 0;
+  font-family: 'Graphik', sans-serif; 
+  background-color: white; 
+}
+
+.App {
+  width: 100%;
+}
