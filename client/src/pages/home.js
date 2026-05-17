@@ -1,8 +1,17 @@
 import React from 'react';
 import '../assets/css/home.css';
+import imageOrville from '../assets/img/Chauffagiste.jpg'; 
+import imagePain from '../assets/img/boulanger.webp';
+import imageChoco from '../assets/img/chocolatier.jpg';
 
 const Home = () => {
+    const artisansDuMois = [
+  { id: 1, name: "Orville Salmons", specialite: "Chauffagiste", lieu: "Evian", note: 5.0, image: imageOrville},
+  { id: 2, name: "Au pain chaud", specialite: "Boulanger", lieu: "Montélimar", note: 4.8, image: imagePain},
+  { id: 3, name: "Chocolaterie Labbé", specialite: "Chocolatier", lieu: "Lyon", note: 4.8, image: imageChoco}
+];
   return (
+ 
     <main className="home-content">
       <section className="how-it-works">
         <h2>Comment trouver mon artisan ?</h2>
@@ -26,10 +35,27 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="featured-section">
-        <h2>Les artisans du mois</h2>
-        {/* On s'occupera des fiches après */}
-      </section>
+    <section className="featured-section">
+  <h2>Les artisans du mois</h2>
+  <div className="artisans-grid">
+    {artisansDuMois.map(artisan => (
+      <div key={artisan.id} className="artisan-card">
+      <div className="artisan-image-container">
+                <img src={artisan.image} alt={artisan.name} className="artisan-image" />
+              </div>
+      <div className="artisan-info">
+          <h3>{artisan.name}</h3>
+          <p className="specialite">{artisan.specialite}</p>
+          <p className="lieu">{artisan.lieu}</p>
+      <div className="rating">
+            {"★".repeat(Math.floor(artisan.note))}
+            {artisan.note % 1 !== 0 ? "½" : ""}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
     </main>
   );
 };
