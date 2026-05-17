@@ -141,8 +141,36 @@
   font-size: 1.3rem;
 }
 
-.rating {
-  color: #f1c40f; 
-  font-size: 2rem;
+.rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
   margin-top: 10px;
+}
+
+.star {
+  position: relative;
+  font-size: 2rem; 
+  color: #e0e0e0;
+  display: inline-block;
+  line-height: 1;
+}
+
+.star::before {
+  content: '★';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--fill); 
+  overflow: hidden;
+  color: #f1c40f;   
+  white-space: nowrap;
+  transition: width 0.3s ease;
+}
+
+.note-text {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-dark);
 }
