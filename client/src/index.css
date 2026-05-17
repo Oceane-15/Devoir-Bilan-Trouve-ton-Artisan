@@ -1,3 +1,20 @@
+
+@font-face {
+  font-family: 'Graphik', sans-serif;
+  src: url('./fonts/Graphik-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik' , sans-serif;
+  src: url('./fonts/Graphik-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
 :root {
   --primary-blue: #0074c7;  
   --dark-blue: #00497c;       
@@ -8,10 +25,24 @@
 
 body {
   margin: 0;
-  font-family: 'Graphik', sans-serif; 
+  font-family: 'Graphik', sans-serif;
+  font-weight: 400;
   background-color: white; 
 }
 
 .App {
   width: 100%;
+}
+
+h1, h2, h3, strong {
+  font-weight: 700;
+}
+
+p, span, a, li {
+  font-weight: 400;
+}
+
+
+button, input, select, textarea {
+  font-family: 'Graphik', sans-serif;
 }
