@@ -1,0 +1,109 @@
+$primary-blue: #0074c7;
+$dark-blue: #00497c;
+$light-white: #f1f8fc;
+
+.artisan-list-page {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+
+  .list-title { color: $dark-blue; font-weight: 800; margin-bottom: 40px; }
+
+  .artisans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    @media (max-width: 992px) { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 576px) { grid-template-columns: 1fr; }
+  }
+
+  .artisan-card {
+    background: $light-white;
+    border: 3px solid $primary-blue;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-img { 
+        width: 100%; 
+        height: 200px; 
+        object-fit: cover; 
+        border-bottom: 2px solid $primary-blue; 
+    }
+
+    .card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+
+      .name { color: $primary-blue; 
+        font-size: 1.7rem; 
+        font-weight: bold; 
+        margin-bottom: 5px; 
+    }
+      .spec { font-weight: bold;
+         font-size: 1.3rem;
+          margin-bottom: 5px;
+    }
+      .city { color:#384050; 
+        font-size: 1.2rem; 
+        font-weight: bold; 
+    }
+
+      .stars { 
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        color: $dark-blue; 
+        font-weight: 800;
+
+        .star-icon {  
+          font-size: 1.8rem; 
+          margin-right: 10px;
+          display: flex;
+
+          .star {
+            position: relative;
+            color: rgba(255, 193, 7, 0.2); 
+            
+            &::before {
+              content: '★';
+              position: absolute;
+              top: 0; left: 0;
+              width: var(--rating); 
+              overflow: hidden;
+              color: #ffc107;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+
+      .btn-profile {
+        background: $primary-blue;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 10px 25px;
+        font-weight: bold;
+        margin-top: auto;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover { background-color: $dark-blue;
+     }
+      }
+    }
+  }
+}

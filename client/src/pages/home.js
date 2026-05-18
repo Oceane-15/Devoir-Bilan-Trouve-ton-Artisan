@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/home.css";
+import "../assets/scss/home.scss";
 import imageOrville from "../assets/img/Chauffagiste.jpg";
 import imagePain from "../assets/img/boulanger.webp";
 import imageChoco from "../assets/img/chocolatier.jpg";
