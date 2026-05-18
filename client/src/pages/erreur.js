@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/css/erreur.css'; 
+import '../assets/scss/erreur.scss'; 
 import robotError from '../assets/img/Erreur 404.jpg'; 
 
 const Erreur = () => {

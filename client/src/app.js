@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/home';
+import ArtisansList from './pages/artisansList';
 import Erreur from './pages/erreur';
-import './index.css'
+import './index.scss'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/artisans" element={<ArtisansList artisans={[]} />}/>
           <Route path="*" element={<Erreur />} />
         </Routes>
         <Footer />
