@@ -1,176 +1,221 @@
+$primary-blue: #0074c7;
+$dark-blue: #00497c;
+$light-white: #f1f8fc;
+
 .home-content {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-}
+  box-sizing: border-box;
 
-.how-it-works {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.how-it-works h2 {
-  font-size: 1.8rem;
-  color: var(--dark-blue);
-  margin-bottom: 40px;
-}
-
-/* --- STRUCTURE DE LA GRILLE --- */
-.steps-container {
-  display: grid;
-  grid-template-columns: 1fr; 
-  gap: 20px;
-}
-
-.step-card {
-  background: var(--primary-blue);
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-.step-number {
-  color: white;
-  padding: 5px 15px;
-  min-width: 100px;  
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-.step-card p {
-  color: white;            
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-/* --- TABLETTE (2 colonnes) --- */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .steps-container {
-    grid-template-columns: repeat(2, 1fr); 
+  .text-center {
+    text-align: center; 
   }
-  .artisans-grid .artisan-card:nth-child(3) {
-    grid-column: span 2; 
-    justify-self: center; 
-    width: 450px; 
+  .mb-4 {
+    margin-top: 30px; 
   }
-}
-
-/* --- ORDINATEUR (4 colonnes) --- */
-@media (min-width: 1024px) {
-  .steps-container {
-    grid-template-columns: repeat(4, 1fr); 
+  .mb-5 {
+    margin-bottom: 40px; 
   }
-}
 
-/* --- Artisans du mois --- */
-.featured-section {
-  margin-top: 60px;
-  text-align: center;
-}
+  .how-it-works {
+    h2 {
+      font-size: 1.8rem;
+      color: $dark-blue;
+    }
 
-.featured-section h2 {
-  font-size: 1.8rem;
-  color: var(--dark-blue);
-  margin-bottom: 40px;
-}
+    /* --- STRUCTURE DE LA GRILLE DES ÉTAPES --- */
+    .steps-container {
+      display: grid;
+      grid-template-columns: 1fr; 
+      gap: 20px;
 
-.artisans-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  justify-content: center;
-  width: 100%;
-  gap: 30px;
-}
+      /* --- TABLETTE (2 colonnes) --- */
+      @media (min-width: 576px) and (max-width: 1023px) {
+        grid-template-columns: repeat(2, 1fr); 
+      }
 
-.artisan-card {
-  background: var(--light-white);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
-  border: 3px solid var(--primary-blue);
-}
+      /* --- ORDINATEUR (4 colonnes) --- */
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr); 
+      }
+    }
 
-.artisan-card:hover {
-  transform: translateY(-10px);
-}
+    .step-card {
+      background: $primary-blue;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      height: 100%;
+      box-sizing: border-box;
 
-.artisan-image-container {
-  height: 210px; 
-  width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-}
+      .step-number {
+        color: white;
+        padding: 5px 15px;
+        min-width: 100px;  
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
 
-.artisan-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}
+      p {
+        color: white;            
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
 
-.artisan-info {
-  padding: 20px;
-  text-align: center;
-}
+  /* --- ARTISANS DU MOIS --- */
+  .featured-section {
+    margin-top: 60px;
 
-.artisan-info h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.5rem;
-  color: var(--primary-blue);
-}
+    h2 {
+      font-size: 1.8rem;
+      color: $dark-blue;
+    }
 
-.artisan-info .specialite { 
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: var(--text-dark);
-  margin-bottom: 5px;
-}
+    .artisans-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      width: 100%;
+      gap: 30px;
 
-.artisan-info .lieu {
-  font-weight: bold;
-  color: var(--text-dark);
-  font-size: 1.3rem;
-}
+      /* --- TABLETTE (2 colonnes + centrage du 3ème) --- */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        grid-template-columns: repeat(2, 1fr); 
+        
+        .artisan-item:nth-child(3) {
+          grid-column: span 2; 
+          justify-self: center; 
+          width: 100%;
+          max-width: 450px; 
+        }
+      }
 
-.rating-container {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  gap: 10px;
-  margin-top: 10px;
-}
+      /* --- ORDINATEUR (3 colonnes) --- */
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr); 
+      }
+    }
 
-.star {
-  position: relative;
-  font-size: 2rem; 
-  color: #e0e0e0;
-  display: inline-block;
-  line-height: 1;
-}
+    /* --- ANNULATION DU STYLE DES LIENS SUR LES CARTES (CORRIGÉ ICI !) --- */
+    .artisan-card-link {
+      text-decoration: none !important; 
+      color: inherit !important;        
+      display: block;                   
+      height: 100%;
+      
+      &:hover {
+        text-decoration: none !important; 
+        color: inherit !important;
+      }
+    }
 
-.star::before {
-  content: '★';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--fill); 
-  overflow: hidden;
-  color: #f1c40f;   
-  white-space: nowrap;
-  transition: width 0.3s ease;
-}
+    .artisan-card {
+      background: $light-white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      border: 3px solid $primary-blue;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
 
-.note-text {
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--text-dark);
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      .artisan-image-container {
+        height: 210px; 
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+
+        .artisan-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; 
+        }
+      }
+
+      .artisan-info {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+
+        h3 {
+          margin: 0 0 10px 0;
+          font-size: 1.5rem;
+          color: $primary-blue;
+        }
+
+        .specialite { 
+          font-weight: bold;
+          font-size: 1.3rem;
+          color: #333;
+          margin-bottom: 5px;
+        }
+
+        .lieu {
+          font-weight: bold;
+          color: #333;
+          font-size: 1.3rem;
+          margin-bottom: 15px;
+        }
+
+        .rating-container {
+          display: flex;
+          align-items: center;
+          justify-content: center; 
+          gap: 10px;
+          margin-top: auto; 
+
+          .stars {
+            display: flex;
+          }
+
+          .star {
+            position: relative;
+            font-size: 2rem; 
+            color: rgba(255, 193, 7, 0.2); 
+            display: inline-block;
+            line-height: 1;
+
+            &::before {
+              content: '★';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: var(--fill); 
+              overflow: hidden;
+              color: #ffc107;   
+              white-space: nowrap;
+              transition: width 0.3s ease;
+            }
+          }
+
+          .note-text {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: $dark-blue;
+          }
+        }
+      }
+    }
+  }
 }
