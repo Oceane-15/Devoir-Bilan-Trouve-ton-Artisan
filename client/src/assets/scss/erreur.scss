@@ -5,59 +5,84 @@
   min-height: calc(100vh - 200px); 
   padding: 40px 20px;
   background-color: white;
-}
+  box-sizing: border-box;
 
-.error-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 800px;
-}
 
-.error-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
-.robot-img {
-  width: 500px;
-  height: auto;
-}
-
-.error-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--text-dark);
-  margin: 20px 0 40px 0;
-}
-
-.btn-back-home {
-  background-color: var(--green);
-  color: white;
-  text-decoration: none;
-  padding: 15px 40px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-.btn-back-home:hover {
-  background-color: #76a15b;
-  transform: translateY(-2px);
-}
-
-/* --- TABLETTE et MOBILE --- */
-@media (max-width: 768px) {
-  .error-visual {
-    flex-direction: column; 
-    text-align: center;
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
-  .error-title {
-    font-size: 1.8rem;
+  .error-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    .robot-img {
+      width: 100%;
+      max-width: 500px; 
+      height: auto;
+    }
+  }
+
+  .error-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .error-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 20px 0 40px 0;
+      text-align: center;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .btn-back-home {
+        background-color: var(--green);
+        color: white;
+        text-decoration: none;
+        padding: 15px 40px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        display: inline-block;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #76a15b; 
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  /* ---TABLETTE et MOBILE --- */
+  @media (max-width: 768px) {
+    .error-visual {
+      flex-direction: column; 
+      text-align: center;
+    }
+
+    .error-details {
+      .error-title {
+        font-size: 1.8rem;
+      }
+    }
   }
 }

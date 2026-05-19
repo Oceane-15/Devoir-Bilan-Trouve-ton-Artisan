@@ -21,10 +21,18 @@
   margin-right: 30px;
 }
 
-.footer-address p {
-  margin: 5px 0;
-  font-size: 1rem;
-  line-height: 1.4;
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; 
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
 }
 
 .footer-bottom {
@@ -32,22 +40,29 @@
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.3); 
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .construction-tag {
   background-color: #cd2c2e; 
-  color:#f1f8fc;
+  color: #f1f8fc;
   display: inline-block;
   padding: 8px 15px;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-top: 0px;       
+  margin-bottom: 20px;   
 }
+
 
 .footer-links {
   display: flex;
-  flex-direction: column; 
-  gap: 15px;
+  flex-direction: row; 
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px; 
 }
 
 .footer-links span {
@@ -55,60 +70,57 @@
   font-size: 0.9rem;
 }
 
-/* --- VERSION ORDINATEUR --- */
+/* ---ORDINATEUR --- */
 @media (min-width: 1024px) {
   .footer-top {
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
-    margin-bottom: 50px;
+    justify-content: space-between;
   }
 
- 
-  .footer-logo-section {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 50px; 
+  .footer-logo-img {
+    height: 190px;
+    margin-bottom: 0;
+    margin-right: 60px;
   }
-
 
   .footer-address-section {
-    flex: 1;
-    text-align: center;
+    flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    gap: 3px;
+    justify-content: center;
+    margin-right: 130px;
   }
 
   .footer-address p {
-    margin: 0;
+    font-size: 1.2rem;
   }
 
-  
   .footer-spacer {
-    flex: 1;
+    width: 250px; 
   }
 
   .footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
     flex-direction: column; 
-    gap: 15px;
+    align-items: center;
+  }
+
+  .construction-tag {
+    margin-bottom: 25px; 
+    font-size: 1.1rem;
+    padding: 10px 20px;
   }
 
   .footer-links {
-    flex-direction: row; 
+    flex-direction: row;
     gap: 100px;
-    justify-content: center;
   }
 
-  .construction-tag{
-    margin-right : 580px
-  }
-
-  .footer-logo-img{
-    height: 200px;
+  .footer-links span {
+    font-size: 1.1rem;
   }
 }
