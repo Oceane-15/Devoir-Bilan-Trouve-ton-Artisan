@@ -91,7 +91,7 @@ $light-white: #f1f8fc;
       width: 100%;
       gap: 30px;
 
-      /* --- TABLETTE (2 colonnes + centrage du 3ème) --- */
+      /* --- TABLETTE (2 colonnes) --- */
       @media (min-width: 768px) and (max-width: 1023px) {
         grid-template-columns: repeat(2, 1fr); 
         
@@ -109,7 +109,6 @@ $light-white: #f1f8fc;
       }
     }
 
-    /* --- ANNULATION DU STYLE DES LIENS SUR LES CARTES (CORRIGÉ ICI !) --- */
     .artisan-card-link {
       text-decoration: none !important; 
       color: inherit !important;        

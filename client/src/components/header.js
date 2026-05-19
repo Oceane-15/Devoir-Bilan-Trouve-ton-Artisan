@@ -8,14 +8,12 @@ const Header = () => {
 
   return (
     <header className="main-header">
-      {/* 1. Logo (à GAUCHE) - Cliquable */}
       <div className="logo-section">
         <Link to="/">
           <img src={logo} alt="Logo" className="Logo-img" />
         </Link>
       </div>
 
-      {/* 2. Barre de recherche (au CENTRE) */}
       <div className="search-section">
         <div className="search-bar">
           <input type="text" placeholder="Rechercher" />
@@ -23,7 +21,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* 3. Bouton Burger (à DROITE) - Reprend sa place exacte */}
       <button className="burger-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         {isMenuOpen ? '✖' : '☰'}
       </button>

@@ -4,11 +4,9 @@ import logo from '../assets/img/Logo.png';
 
 const Footer = () => {
   return (
-    /* Ruse examen : Conteneurs sémantiques discrets */
     <footer className="main-footer bs-container-fluid">
       <div className="footer-container bs-container">
         
-        {/* SECTION SUPÉRIEURE (Logo + Bloc Adresse centré) */}
         <div className="footer-top bs-row">
           <div className="footer-logo-section bs-col">
             <img src={logo} alt="Logo" className="footer-logo-img" />
@@ -27,7 +25,6 @@ const Footer = () => {
           <div className="footer-spacer bs-col"></div>
         </div>
 
-        {/* SECTION INFÉRIEURE (Séparation + Construction + Mentions) */}
         <div className="footer-bottom bs-row">
           <div className="construction-tag">Page en construction</div>
           <div className="footer-links bs-d-flex">
